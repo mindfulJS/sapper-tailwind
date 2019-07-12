@@ -1,15 +1,30 @@
 <script>
+	import SplashScreen from "../components/SplashScreen.svelte";
+	import Background from "../components/Background.svelte";
 	import Nav from "../components/Nav.svelte";
+	import { onMount } from "svelte";
+	import { fade } from "svelte-transitions";
+
 	export let segment;
+
+	let showSplashScreen = true;
+	const time = 1300;
+
+	onMount(() => {
+	  setTimeout(() => (showSplashScreen = false), time);
+	});
 </script>
 
-<style>
-	main {
-	}
-</style>
+{#if showSplashScreen}
+	<div transition:fade>
+		<SplashScreen />
+	</div>
+{:else}
+	<Nav {segment}/>
+	<Background />
+	<main>
+		<slot></slot>
+	</main>
 
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
-</main>
+	
+{/if}
