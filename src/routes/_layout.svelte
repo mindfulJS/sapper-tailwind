@@ -1,6 +1,5 @@
 <script>
 	import SplashScreen from "../components/SplashScreen.svelte";
-	import Background from "../components/Background.svelte";
 	import Nav from "../components/Nav.svelte";
 	import { onMount } from "svelte";
 	import { fade } from "svelte-transitions";
@@ -21,7 +20,6 @@
 	</div>
 {:else}
 	<Nav {segment}/>
-	<Background />
 	<main>
 		<slot></slot>
 	</main>

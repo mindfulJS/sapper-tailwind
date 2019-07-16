@@ -5,7 +5,7 @@
 
 <style>
   .bar {
-    background-color: red;
+    background-color: rgb(253, 68, 68);
     color: white;
     height: 3px;
     transition: 0.2s;

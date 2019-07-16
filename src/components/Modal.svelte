@@ -37,6 +37,6 @@
 	<hr>
 
   <div on:click='{() => dispatch("close")}'>
-	  <Button color="white">Close</Button>
+	  <Button buttonColor="white">Close</Button>
   </div>
 </div>

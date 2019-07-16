@@ -13,7 +13,7 @@
 </script>
 
 <div on:click="{() => showModal = true}">
-  <Button color="white">Open</Button>
+  <Button buttonColor="white">Open</Button>
 </div>
 
 {#if showModal}
