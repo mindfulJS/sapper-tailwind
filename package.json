@@ -1,6 +1,6 @@
 {
-  "name": "sapper-tailwind",
-  "description": "my-portfolio",
+  "name": "sapper-tailwind-portfolio",
+  "description": "TODO",
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
@@ -12,7 +12,9 @@
     "test": "run-p --race dev cy:run",
     "now-build": "sapper export --legacy"
   },
-  "browserslist": ["last 3 version"],
+  "browserslist": [
+    "last 3 version"
+  ],
   "dependencies": {
     "compression": "1.7.4",
     "polka": "0.5.2",

@@ -1,4 +1,4 @@
-export function getProjects() {
+export function getProjectsData() {
   return [
     {
       name: "Instruments Checks",

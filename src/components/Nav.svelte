@@ -4,6 +4,7 @@
   import NavBar from "./NavBar.svelte";
   import Button from "./Button.svelte";
   export let segment;
+  export let y;
 
   let current = "home";
   let currentEl;
@@ -27,7 +28,7 @@
   });
 </script>
 
-<nav class="m-auto w-auto p-4">
+<nav class="m-auto w-auto p-4" style="transform: scale({1 - Math.max(0, y / 1500)})">
 	<ul class="flex">
 		<li><a id="home" class='{segment === undefined ? "selected" : ""} p-2' href='.' on:click="{() => current = 'home'}">
 			<Button buttonColor="white">Home</Button></a></li>
@@ -37,7 +38,7 @@
 			<Button buttonColor="white">About</Button></a></li>
 	</ul>
 	<!-- Animated bar-->
-	<div class="pt-2">
+	<div class="pt-4">
 		<NavBar {width} {offset} />
 	</div>
 </nav>
