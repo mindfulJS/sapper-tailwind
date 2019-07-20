@@ -1,17 +1,25 @@
 <script>
-		import IconWelcome from "../components/IconWelcome.svelte";
-		import IconSkills from "../components/IconSkills.svelte";
-		import IconProjects from "../components/IconProjects.svelte";
+  import IconWelcome from "../components/IconWelcome.svelte";
+  import IconSkills from "../components/IconSkills.svelte";
+  import IconProjects from "../components/IconProjects.svelte";
+  import Tooltip from "../components/Tooltip.svelte";
 </script>
 
+
 <div class="Bubble-default Bubble1">
-  <div class="mt-3"><IconWelcome /></div>
+  <Tooltip tooltipText="It's coffee time, welcome!">
+    <div class="mt-4"><IconWelcome /></div>
+  </Tooltip>
 </div>
 <div class="Bubble-default Bubble2">
-  <div class="mt-5"><IconSkills /></div>
+  <Tooltip tooltipText="My skills">
+    <div class="mt-5"><IconSkills /></div>
+  </Tooltip>
 </div>
 <div class="Bubble-default Bubble3">
-  <div class="mt-5"><IconProjects /></div>
+  <Tooltip tooltipText="My projects">
+    <div class="mt-5"><IconProjects /></div>
+  </Tooltip>
 </div>
 
 <style>
