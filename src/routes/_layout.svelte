@@ -16,6 +16,36 @@
 	});
 </script>
 
+<style>
+	:global(html) {
+	  scroll-behavior: smooth;
+	}
+
+	:global(body) {
+	  text-align: center;
+	  margin: auto;
+	  width: 100%;
+	}
+
+	:global(.shadow-xl) {
+	  /* -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+	  box-shadow: 0 20px 25px -5px #e53e3e, 0 10px 10px -5px #220002;
+	}
+
+	:global(.shadow-xl2) {
+	  /* -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+	  box-shadow: 0 20px 25px -5px white, 0 10px 10px -5px #220002;
+	}
+
+	.foreground {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+</style>
+
 <svelte:window bind:scrollY={y}/>
 
 {#if showSplashScreen}
@@ -33,17 +63,3 @@
 	
 {/if}
 
-<style>
-	.foreground {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	}
-
-	:global(.shadow-xl) {
-	  /* -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
-	  box-shadow: 0 20px 25px -5px #e53e3e, 0 10px 10px -5px #220002;
-	}
-</style>

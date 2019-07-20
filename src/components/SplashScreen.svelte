@@ -24,8 +24,6 @@ let text = "Welcome";
     perspective: 100px;
     background-color: #1c2022;
     position: fixed;
-    /* border: 3px solid #00ff00; */
-    /* border-radius: 3px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

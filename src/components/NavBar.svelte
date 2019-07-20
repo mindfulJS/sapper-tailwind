@@ -5,9 +5,8 @@
 
 <style>
   .bar {
-    background-color: rgb(253, 68, 68);
-    color: white;
-    height: 3px;
+    background-color: rgb(245, 76, 76);
+    height: 4px;
     transition: 0.2s;
   }
 

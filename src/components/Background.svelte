@@ -54,7 +54,7 @@
 	.last-layer-container {
 	  position: relative;
 	  width: 100%;
-	  height: 300vh;
+	  height: 800vh;
 	  color: rgb(220, 113, 43);
 	  text-align: center;
 	  padding: 4em 0.5em 0.5em 0.5em;
@@ -63,10 +63,10 @@
 
 	.last-layer {
 	  position: absolute;
-	  top: 711px;
+	  top: 700px;
 	  left: 0;
 	  width: 100%;
-	  height: calc(100% - 711px);
+	  height: calc(100% - 700px);
 	  background-color: rgb(32, 0, 1);
 	  color: white;
 	  padding: 20vh 0 0 0;

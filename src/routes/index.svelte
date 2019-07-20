@@ -1,25 +1,106 @@
 <script>
-	import { slide } from "svelte-transitions";
+	import { fade, slide } from "svelte-transitions";
+	import Bubbles from "../components/Bubbles.svelte";
+	import ButtonScrollDown from "../components/ButtonScrollDown.svelte";
+	import IconWelcome from "../components/IconWelcome.svelte";
+	import IconSkills from "../components/IconSkills.svelte";
+	import IconProjects from "../components/IconProjects.svelte";
+	import { getAboutData } from "../data/about_data";
+	import { getProjectsData } from "../data/projects_data";
+
+	const about = getAboutData();
+	const projects = getProjectsData();
 	export let y;
 </script>
+
+<style>
+	.fade-in {
+	  opacity: 0;
+	  animation: fadeIn 0.4s forwards;
+	  animation-delay: 0.2s;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+</style>
 
 <svelte:head>
 	<title>My Portfolio</title>
 </svelte:head>
 
+<!-- Define y for scrolling -->
 <svelte:window bind:scrollY={y}/>
 
-<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
-	<figure class="max-w-sm mx-auto flex p-6" >
-		<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50 shadow-xl" />
-	</figure>
+<!-- Picture in circle-->
+<a href="#underground" alt="Go down">
+	<div transition:slide class="max-w-sm mx-auto flex p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
+		<figure class="mx-auto p-6" >
+			<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50 shadow-xl" />
+			<Bubbles />
+		</figure>
+	</div>
+</a>
+
+<!-- Button to go down the page -->
+<div class="pt-10">
+	<ButtonScrollDown />
+</div>
+<!-- Underground part -->
+<div id="underground" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in" transition:fade>
+  <!-- Welcome -->
+	<div id="about" class="mt-56" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
+		<IconWelcome />
+		<p id="about-title" class="text-4xl">Welcome to my portfolio</p>
+		<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
+			<div class="w-full text-justify">
+				{about.about.introduction}
+			</div>
+		</div>
+	</div>
+  <!-- Skills -->
+	<div id="skills" class="mt-32 mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
+		<IconSkills />
+		<p id="skills-title" class="text-4xl">Skills</p>
+		<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
+			<div class="w-full text-justify">
+				{about.about.skills}
+			</div>
+		</div>
+	</div>
+  <!-- Projects -->
+	<div id="projects" class="mt-32 mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
+		<IconProjects />
+		<p id="projects-title" class="text-4xl">Projects</p>
+	</div>
+	
 </div>
 
-<!--
-<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-white rounded-lg shadow-xl">
-	<div class="w-1/3 mr-4">Welcome to my page</div>
-	<figure class="w-2/3">
-		<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50" />
-	</figure>
+<!-- Carousel -->
+<div id="carousel" class="max-w-full overflow-x-hidden">
+	<div class="mt-20 mx-2 flex" style="transform: translateX({(y - 1200)/4 + "px"})">
+		{#each projects.list as project, i}
+			<div transition:slide class="w-1/3 flex mx-auto p-6 m-6">
+				<figure class="w-full mx-auto">
+					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+					
+				</figure>
+				<p class="text-white absolute">hello world</p>
+			</div>
+		{/each}
+	</div>
+	<div class="mx-2 flex" style="transform: translateX({-(y - 1200)/4 + "px"})">
+		{#each projects.list as project, i}
+			<div transition:slide class="w-1/3 flex mx-auto p-6 m-6">
+				<figure class="w-full mx-auto">
+					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+				</figure>
+			</div>
+		{/each}
+	</div>
 </div>
--->
+

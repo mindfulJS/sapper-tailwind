@@ -1,5 +1,8 @@
 <script>
 	import { slide } from "svelte-transitions";
+	import { getAboutData } from "../data/about_data";
+
+	const about = getAboutData();
 	let showDescription = false;
 	export let y;
 </script>
@@ -15,13 +18,12 @@
 		<img src="ben.jpg" alt="Ben" class="cursor-pointer hover:opacity-75 rounded-full w-30 h-30" on:click="{() => showDescription = true}" />
 	</figure>
 	<div class="w-2/3 text-justify">
-		My name is Ben Lisneuf and I am an ambitious web developer based in London. I am passionate about new technology and inspired by fast-growing companies.
+		{about.about.introduction}
 		{#if showDescription}
 			<div transition:slide>
-				<p class="mt-4"><b>Less is more!</b> I believe less code is always more efficient and maintainable.</p>
+				<p class="mt-4"><b>Less is more!</b> I believe less code is more maintainable and efficient.</p>
 				<p class="mt-4">Contact me at <a class="text-green-600 font-bold" href="mailto: benjamin.lisneuf@gmail.com">benjamin.lisneuf@gmail.com</a></p>
 			</div>
 		{/if}
 	</div>
-
 </div>
