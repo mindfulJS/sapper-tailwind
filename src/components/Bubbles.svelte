@@ -6,32 +6,36 @@
 </script>
 
 
-<div class="Bubble-default Bubble1">
+<div class="bubble-default bubble1">
   <Tooltip tooltipText="It's coffee time, welcome!">
-    <div class="mt-4"><IconWelcome /></div>
+    <div class="bubble-circle">
+      <div class="mt-4"><IconWelcome /></div>
+    </div>
   </Tooltip>
 </div>
-<div class="Bubble-default Bubble2">
+<div class="bubble-default bubble2">
   <Tooltip tooltipText="My skills">
-    <div class="mt-5"><IconSkills /></div>
+    <div class="bubble-circle">
+      <div class="mt-5"><IconSkills /></div>
+    </div>
   </Tooltip>
 </div>
-<div class="Bubble-default Bubble3">
+<div class="bubble-default bubble3">
   <Tooltip tooltipText="My projects">
-    <div class="mt-5"><IconProjects /></div>
+    <div class="bubble-circle">
+      <div class="mt-5"><IconProjects /></div>
+    </div>
   </Tooltip>
 </div>
 
 <style>
-  .Bubble-default {
-    background-color: rgba(255, 255, 255, 0.5);
+  .bubble-default {
     position: absolute;
     top: calc(9rem + 8px);
     left: calc(50% - 40px);
     width: 80px;
     height: 80px;
     display: inline-block;
-    border: lightgrey solid 3px;
     border-radius: 50%;
     transition: 0.25s ease-in-out;
     transform-origin: "50% 50%";
@@ -39,20 +43,34 @@
     transition-delay: 0.05s;
   }
 
-  .Bubble-default:hover {
-    background-color: rgba(255, 255, 255, 0.75);
+  .bubble-default:hover {
     animation-play-state: paused;
   }
 
-  .Bubble1 {
+  .bubble-circle {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border: lightgrey solid 3px;
+    border-radius: 50%;
+    transition: 0.25s ease-in-out;
+    transform-origin: "50% 50%";
+    transition-delay: 0.05s;
+  }
+  .bubble-circle:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .bubble1 {
     animation: orbit1 30s linear infinite;
   }
 
-  .Bubble2 {
+  .bubble2 {
     animation: orbit2 30s linear infinite;
   }
 
-  .Bubble3 {
+  .bubble3 {
     animation: orbit3 30s linear infinite;
   }
 
