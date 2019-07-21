@@ -1,6 +1,6 @@
 <script>
 	import SplashScreen from "../components/SplashScreen.svelte";
-	import Background from "../components/Background.svelte";
+	import BackgroundParallax from "../components/BackgroundParallax.svelte";
 	import Nav from "../components/Nav.svelte";
 	import { onMount } from "svelte";
 	import { fade } from "svelte-transitions";
@@ -53,7 +53,7 @@
 		<SplashScreen />
 	</div>
 {:else}
-	<Background {y} />
+	<BackgroundParallax {y} />
 	<div class="foreground">
 			<Nav {y} {segment}/>
 			<main class="mt-4">

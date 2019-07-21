@@ -5,8 +5,10 @@
 	import IconWelcome from "../components/IconWelcome.svelte";
 	import IconSkills from "../components/IconSkills.svelte";
 	import IconProjects from "../components/IconProjects.svelte";
+	import IconContact from "../components/IconContact.svelte";
 	import { getAboutData } from "../data/about_data";
 	import { getProjectsData } from "../data/projects_data";
+	import BackgroundSlide from "../components/BackgroundSlide.svelte";
 
 	const about = getAboutData();
 	const projects = getProjectsData();
@@ -81,26 +83,42 @@
 </div>
 
 <!-- Carousel -->
-<div id="carousel" class="max-w-full overflow-x-hidden">
-	<div class="mt-20 mx-2 flex" style="transform: translateX({(y - 1200)/4 + "px"})">
+<div id="carousel" class="overflow-x-hidden mt-10 mb-32 mx-auto text-center w-full">
+	
+	<div class="mx-2 flex flex-row" style="transform: translateX({(y - 1200)/4 + "px"})">
 		{#each projects.list as project, i}
-			<div transition:slide class="w-1/3 flex mx-auto p-6 m-6">
-				<figure class="w-full mx-auto">
-					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
-					
-				</figure>
-				<p class="text-white absolute">hello world</p>
-			</div>
-		{/each}
-	</div>
-	<div class="mx-2 flex" style="transform: translateX({-(y - 1200)/4 + "px"})">
-		{#each projects.list as project, i}
-			<div transition:slide class="w-1/3 flex mx-auto p-6 m-6">
-				<figure class="w-full mx-auto">
+			<div transition:slide class="m-2 flex-1">
+				<figure>
 					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
 				</figure>
 			</div>
 		{/each}
 	</div>
+	<div class="mx-2 flex flex-row-reverse" style="transform: translateX({-(y - 1200)/4 + "px"})">
+		{#each projects.list as project, i}
+			<div transition:slide class="m-2 flex-1">
+				<figure>
+					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+				</figure>
+			</div>
+		{/each}
+	</div>
+	
 </div>
 
+
+<div id="underground-end" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in pt-32 pb-32 relative" transition:fade>
+  <!-- contact -->
+	<BackgroundSlide />
+	<div id="contact" class="mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
+	
+		<IconContact />
+		<p id="contact-title" class="text-4xl">Contact</p>
+		<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
+			<div class="w-full text-center">
+				{about.about.contact}
+			</div>
+		</div>
+	</div>
+	
+</div>

@@ -24,7 +24,6 @@
 	#matrix {
 	  margin: auto;
 	  width: 100%;
-	  height: 100%;
 	  background: #1c2022;
 	  background-image: -webkit-gradient(
 	    linear,
