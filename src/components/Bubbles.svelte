@@ -48,18 +48,18 @@
   }
 
   .bubble-circle {
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     width: 80px;
     height: 80px;
     display: inline-block;
-    border: lightgrey solid 3px;
+    /*border: lightgrey solid 3px;*/
     border-radius: 50%;
     transition: 0.25s ease-in-out;
     transform-origin: "50% 50%";
     transition-delay: 0.05s;
   }
   .bubble-circle:hover {
-    background-color: rgba(255, 255, 255, 0.75);
+    /*background-color: rgba(255, 255, 255, 0.75);*/
   }
 
   .bubble1 {

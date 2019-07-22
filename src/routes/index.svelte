@@ -8,7 +8,7 @@
 	import IconContact from "../components/IconContact.svelte";
 	import { getAboutData } from "../data/about_data";
 	import { getProjectsData } from "../data/projects_data";
-	import BackgroundSlide from "../components/BackgroundSlide.svelte";
+	//import BackgroundSlide from "../components/BackgroundSlide.svelte";
 
 	const about = getAboutData();
 	const projects = getProjectsData();
@@ -94,7 +94,7 @@
 			</div>
 		{/each}
 	</div>
-	<div class="mx-2 flex flex-row-reverse" style="transform: translateX({-(y - 1200)/4 + "px"})">
+	<div class="mx-2 flex flex-row" style="transform: translateX({-(y - 1200)/4 + "px"})">
 		{#each projects.list as project, i}
 			<div transition:slide class="m-2 flex-1">
 				<figure>
@@ -109,7 +109,6 @@
 
 <div id="underground-end" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in pt-32 pb-32 relative" transition:fade>
   <!-- contact -->
-	<BackgroundSlide />
 	<div id="contact" class="mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
 	
 		<IconContact />
