@@ -7,23 +7,23 @@
 
 
 <div class="bubble-default bubble1">
-  <Tooltip tooltipText="It's coffee time, welcome!">
+  <Tooltip tooltipText="My projects">
     <div class="bubble-circle">
-      <div class="mt-4"><IconWelcome /></div>
+      <div class="mt-6"><IconProjects /></div>
     </div>
   </Tooltip>
 </div>
 <div class="bubble-default bubble2">
   <Tooltip tooltipText="My skills">
     <div class="bubble-circle">
-      <div class="mt-5"><IconSkills /></div>
+      <div class="mt-6"><IconSkills /></div>
     </div>
   </Tooltip>
 </div>
 <div class="bubble-default bubble3">
-  <Tooltip tooltipText="My projects">
+  <Tooltip tooltipText="A warm (coffee) welcome!">
     <div class="bubble-circle">
-      <div class="mt-5"><IconProjects /></div>
+      <div class="mt-5"><IconWelcome /></div>
     </div>
   </Tooltip>
 </div>
@@ -44,6 +44,8 @@
   }
 
   .bubble-default:hover {
+    /*background-color: rgba(255, 255, 255, 0.25);
+      border: white 1px solid;*/
     animation-play-state: paused;
   }
 

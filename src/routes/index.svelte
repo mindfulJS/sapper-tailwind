@@ -60,7 +60,7 @@
 		<p id="about-title" class="text-4xl">Welcome to my portfolio</p>
 		<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
 			<div class="w-full text-justify">
-				{about.about.introduction}
+				{about.about.introduction} {about.about.likes}
 			</div>
 		</div>
 	</div>
