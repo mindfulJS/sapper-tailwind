@@ -7,7 +7,7 @@
   .bar {
     background-color: rgb(245, 76, 76);
     height: 4px;
-    transition: 0.2s;
+    transition: 0.1s;
   }
 
   .bar-offset {

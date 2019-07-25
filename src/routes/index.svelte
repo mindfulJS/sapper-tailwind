@@ -38,7 +38,7 @@
 <!-- Define y for scrolling -->
 <svelte:window bind:scrollY={y}/>
 
-<div transition:slide="{{ delay: 20 }}">
+<div transition:slide="{{ delay: 100 }}">
 <!-- Picture in circle-->
 <a href="#underground" alt="Go down">
 	<div transition:slide class="max-w-sm mx-auto flex p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
