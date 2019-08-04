@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte-transitions";
+  import { fade } from "svelte/transition";
   export let tooltipText;
   let visible = false;
 

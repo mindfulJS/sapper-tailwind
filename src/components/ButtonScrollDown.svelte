@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte-transitions";
+  import { fade } from "svelte/transition";
 </script>
 
 <a href="#underground" alt="Go down" transition:fade>

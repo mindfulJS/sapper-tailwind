@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { fade } from "svelte-transitions";
+  import { fade } from "svelte/transition";
   import NavBar from "./NavBar.svelte";
   import Button from "./Button.svelte";
   export let segment;

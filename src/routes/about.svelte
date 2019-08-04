@@ -1,5 +1,5 @@
 <script>
-	import { slide } from "svelte-transitions";
+	import { fade, slide } from "svelte/transition";
 	import { getAboutData } from "../data/about_data";
 
 	const about = getAboutData();
@@ -13,7 +13,7 @@
 
 <svelte:window bind:scrollY={y}/>
 
-<div transition:slide="{{ delay: 100 }}" class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-white rounded-lg shadow-xl" on:mouseover="{() => showDescription = true}" on:mouseout="{() => showDescription = false}">
+<div in:slide="{{ delay: 220 }}" out:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-white rounded-lg shadow-xl" on:mouseover="{() => showDescription = true}" on:mouseout="{() => showDescription = false}">
 	<figure class="w-1/3 mr-4">
 		<img src="ben.jpg" alt="Ben" class="cursor-pointer hover:opacity-75 rounded-full w-30 h-30" on:click="{() => showDescription = true}" />
 	</figure>

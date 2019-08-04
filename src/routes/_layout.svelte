@@ -3,7 +3,7 @@
 	import BackgroundParallax from "../components/BackgroundParallax.svelte";
 	import Nav from "../components/Nav.svelte";
 	import { onMount } from "svelte";
-	import { fade } from "svelte-transitions";
+	import { fade } from "svelte/transition";
 
 	export let segment;
 	export let y;
@@ -53,6 +53,7 @@
 		<SplashScreen />
 	</div>
 {:else}
+
 	<BackgroundParallax {y} />
 	<div class="foreground">
 			<Nav {y} {segment}/>

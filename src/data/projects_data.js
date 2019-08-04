@@ -3,6 +3,7 @@ export function getProjectsData() {
     icon: "start-up.svg",
     list: [
       {
+        id: 1,
         name: "Instruments Checks",
         showDescription: false,
         codesandboxName: "instruments-checks-i4nbs",
@@ -12,6 +13,7 @@ export function getProjectsData() {
         technologies: "ES6, Maps API, CSS filters, Mobile Design"
       },
       {
+        id: 2,
         name: "Projects Statistics",
         showDescription: false,
         codesandboxName: "projects-statistics-tbg6w",
@@ -21,6 +23,7 @@ export function getProjectsData() {
         technologies: "ES6, Chart.js, Google Charts, Responsive Design"
       },
       {
+        id: 3,
         name: "Svelte Material",
         showDescription: false,
         codesandboxName: "svelte-material-c298p",
