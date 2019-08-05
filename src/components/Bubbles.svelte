@@ -3,7 +3,38 @@
   import IconSkills from "../components/IconSkills.svelte";
   import IconProjects from "../components/IconProjects.svelte";
   import Tooltip from "../components/Tooltip.svelte";
+
+  /*
+      let range = 20;
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      let originX = width / 2;
+      let originY = height / 2;
+      let totalX = width / 2;
+      let totalY = height / 2;
+      let mouseX;
+      let mouseY;
+      let positionX;
+      let positionY;
+      let x;
+      let y;
+
+      function GetMousePosition(event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        positionX = mouseX - originX;
+        positionY = mouseY - originY;
+        console.log(mouseX);
+        x = Math.min(positionX / totalX, 1) * range;
+        y = -Math.min(positionY / totalY, 1) * range;
+      }
+
+       on:mousemove="{GetMousePosition}"
+         style="transform: rotateX({y}deg) rotateY({x}deg)"
+      */
 </script>
+
 
 <div id="bubbles" class="relative mx-auto p-6 w-full h-full">
 	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-transparent w-48 h-48" />
@@ -47,7 +78,7 @@
 
   .bubble-background:hover {
     /*background-color: rgba(255, 255, 255, 0.25);
-                                                            border: white 1px solid;*/
+                                                                                      border: white 1px solid;*/
     animation-play-state: paused;
   }
 
