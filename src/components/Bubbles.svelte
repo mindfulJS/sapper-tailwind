@@ -6,24 +6,24 @@
 </script>
 
 
-<div class="bubble-default bubble1">
+<div class="bubble-default bubble1 frosted-glass">
   <Tooltip tooltipText="My projects">
     <div class="bubble-circle">
-      <div class="mt-6"><IconProjects /></div>
+      <div class="mt-5"><IconProjects /></div>
     </div>
   </Tooltip>
 </div>
-<div class="bubble-default bubble2">
+<div class="bubble-default bubble2 frosted-glass">
   <Tooltip tooltipText="My skills">
     <div class="bubble-circle">
-      <div class="mt-6"><IconSkills /></div>
+      <div class="mt-5"><IconSkills /></div>
     </div>
   </Tooltip>
 </div>
-<div class="bubble-default bubble3">
+<div class="bubble-default bubble3 frosted-glass">
   <Tooltip tooltipText="A warm (coffee) welcome!">
     <div class="bubble-circle">
-      <div class="mt-5"><IconWelcome /></div>
+      <div class="mt-4"><IconWelcome /></div>
     </div>
   </Tooltip>
 </div>
@@ -45,8 +45,13 @@
 
   .bubble-default:hover {
     /*background-color: rgba(255, 255, 255, 0.25);
-      border: white 1px solid;*/
+                          border: white 1px solid;*/
     animation-play-state: paused;
+  }
+
+  .frosted-glass {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
   }
 
   .bubble-circle {
@@ -54,14 +59,15 @@
     width: 80px;
     height: 80px;
     display: inline-block;
-    /*border: lightgrey solid 3px;*/
+    border: transparent solid 3px;
     border-radius: 50%;
     transition: 0.25s ease-in-out;
     transform-origin: "50% 50%";
     transition-delay: 0.05s;
   }
   .bubble-circle:hover {
-    /*background-color: rgba(255, 255, 255, 0.75);*/
+    background-color: rgba(255, 255, 255, 0.35);
+    border: white solid 3px;
   }
 
   .bubble1 {
