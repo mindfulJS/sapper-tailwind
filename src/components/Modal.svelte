@@ -12,11 +12,7 @@
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	}
-
-	.frosted-glass {
-	  background-color: rgba(0, 0, 0, 0.5);
-	  backdrop-filter: blur(5px);
+	  background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	.modal {
@@ -34,7 +30,7 @@
 	}
 </style>
 
-<div class='modal-background frosted-glass' on:click='{() => dispatch("close")}'></div>
+<div class='modal-background' on:click='{() => dispatch("close")}'></div>
 
 <div class='modal'>
 	<slot></slot>
