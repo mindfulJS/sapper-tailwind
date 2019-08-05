@@ -4,4 +4,4 @@
 	const about = getAboutData();
 </script>
 
-<img src="{about.about.iconSkills}" alt="about" class="mx-auto w-8 h-8"/>
+<img src="{about.about.iconSkills}" alt="about" class="mx-auto w-8 h-8" style="padding-top:4px" />
