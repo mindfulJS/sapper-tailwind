@@ -90,7 +90,7 @@
 		{#each projects.list as project, i}
 			<div transition:fade class="m-2 flex-1">
 				<figure>
-					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+					<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
 				</figure>
 			</div>
 		{/each}
@@ -99,7 +99,7 @@
 		{#each projects.list as project, i}
 			<div transition:fade class="m-2 flex-1">
 				<figure>
-					<img class="text-center" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+					<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
 				</figure>
 			</div>
 		{/each}
