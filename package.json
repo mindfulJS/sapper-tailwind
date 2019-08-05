@@ -1,6 +1,6 @@
 {
   "name": "sapper-tailwind-portfolio",
-  "description": "TODO",
+  "description": "Ben's Portfolio",
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",

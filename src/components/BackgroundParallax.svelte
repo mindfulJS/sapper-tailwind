@@ -15,9 +15,12 @@
     {/each}
     
   </div>
+	
   <div class="last-layer-container">
-    <div class="last-layer"></div>
+    <div class="last-layer">
+		</div>
   </div>
+	
 </div>
 
 <style>
@@ -54,10 +57,10 @@
 	.last-layer-container {
 	  position: relative;
 	  width: 100%;
-	  height: 900vh;
+	  min-height: 750vh;
 	  color: rgb(220, 113, 43);
 	  text-align: center;
-	  padding: 4em 0.5em 0.5em 0.5em;
+	  /*padding: 4em 0.5em 0.5em 0.5em;*/
 	  box-sizing: border-box;
 	}
 
@@ -69,7 +72,7 @@
 	  height: calc(100% - 700px);
 	  background-color: rgb(32, 0, 1);
 	  color: white;
-	  padding: 20vh 0 0 0;
+	  /*padding: 20vh 0 0 0;*/
 	}
 
 	@keyframes fadeIn {

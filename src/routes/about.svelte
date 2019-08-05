@@ -4,7 +4,6 @@
 
 	const about = getAboutData();
 	let showDescription = false;
-	export let y;
 </script>
 
 <style>
@@ -18,7 +17,6 @@
 	<title>About</title>
 </svelte:head>
 
-<svelte:window bind:scrollY={y}/>
 
 <div in:slide="{{ delay: 220 }}" out:fade class="frosted-glass max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 rounded-lg" on:mouseover="{() => showDescription = true}" on:mouseout="{() => showDescription = false}">
 	<figure class="w-1/3 mr-4">

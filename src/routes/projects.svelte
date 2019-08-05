@@ -4,7 +4,6 @@
   import { getProjectsData } from "../data/projects_data";
 
   const projects = getProjectsData();
-  export let y;
 </script>
 
 <style>
@@ -18,7 +17,6 @@
 	<title>Projects</title>
 </svelte:head>
 
-<svelte:window bind:scrollY={y}/>
 
 <div out:fade>
   {#each projects.list as project, i (project.id)}

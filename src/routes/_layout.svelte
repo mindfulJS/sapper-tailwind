@@ -57,9 +57,9 @@
 
 	<BackgroundParallax {y} />
 	<div class="foreground">
-			<Nav {y} {segment}/>
+			<Nav {segment}/>
 			<main class="mt-4">
-				<slot></slot>
+				<slot {y}></slot>
 			</main>
 	</div>
 	

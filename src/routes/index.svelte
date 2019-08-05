@@ -8,7 +8,6 @@
 	import IconContact from "../components/IconContact.svelte";
 	import { getAboutData } from "../data/about_data";
 	import { getProjectsData } from "../data/projects_data";
-	//import BackgroundSlide from "../components/BackgroundSlide.svelte";
 
 	const about = getAboutData();
 	const projects = getProjectsData();
@@ -39,87 +38,72 @@
 <svelte:window bind:scrollY={y}/>
 
 <div in:fade="{{ delay: 280 }}" out:fade>
-<!-- Picture in circle-->
-<a href="#underground" alt="Go down">
-	<div transition:fade class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
-		<!--<figure class="mx-auto p-6" >
-			<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50 shadow-xl" />-->
+	<!-- Picture in circle-->
+	<a href="#underground" alt="Go down">
+		<div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}">
 			<Bubbles />
-		<!--</figure>-->
+		</div>
+	</a>
+
+	<!-- Button to go down the page -->
+	<div class="pt-10">
+		<ButtonScrollDown />
 	</div>
-</a>
 
-<!-- Button to go down the page -->
-<div class="pt-10">
-	<ButtonScrollDown />
-</div>
-
-<!-- Underground part -->
-<div transition:fade id="underground" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in">
-  <!-- Welcome -->
-	<div id="about" class="mt-56" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
-		<IconWelcome />
-		<p id="about-title" class="text-4xl">Welcome to my portfolio</p>
-		<div transition:fade class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
-			<div class="w-full text-justify">
+	<!-- Underground part -->
+	<div id="underground" class="fade-in text-white opacity-0">
+		<!-- Welcome -->
+		<div id="about" class="mt-56 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="transform: scale({Math.min(1.7,1/(1 - Math.max(0, y / 5000)))})">
+			<IconWelcome />
+			<p id="about-title" class="text-4xl">Welcome to my portfolio</p>
+			<div class="px-6 text-justify">
 				{about.about.introduction} {about.about.likes}
 			</div>
 		</div>
-	</div>
-  <!-- Skills -->
-	<div id="skills" class="mt-32 mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
-		<IconSkills />
-		<p id="skills-title" class="text-4xl">Skills</p>
-		<div transition:fade class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
-			<div class="w-full text-justify">
+		<!-- Skills -->
+		<div id="skills" class="mt-32 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="transform: scale({Math.min(1.7,1/(1 - Math.max(0, y / 5000)))})">
+			<IconSkills />
+			<p id="skills-title" class="text-4xl">Skills</p>
+			<div class="px-6 text-justify">
 				{about.about.skills}
 			</div>
 		</div>
-	</div>
-  <!-- Projects -->
-	<div id="projects" class="mt-32 mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
-		<IconProjects />
-		<p id="projects-title" class="text-4xl">Projects</p>
-	</div>
-	
-</div>
-
-<!-- Carousel -->
-<div id="carousel" class="overflow-x-hidden mt-10 mb-32 mx-auto text-center w-full">
-	<div class="mx-2 flex flex-row" style="transform: translateX({(y - 1200)/4 + "px"})">
-		{#each projects.list as project, i}
-			<div transition:fade class="m-2 flex-1">
-				<figure>
-					<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
-				</figure>
+		<!-- Projects -->
+		<div id="projects" class="mt-32 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="transform: scale({Math.min(1.7,1/(1 - Math.max(0, y / 5000)))})">
+			<IconProjects />
+			<p id="projects-title" class="text-4xl">Projects</p>
+		</div>
+		
+		<!-- Carousel -->
+		<div id="projects-carousel" class="mt-10 mb-32 mx-auto text-center w-full overflow-x-hidden" style="-webkit-overflow-scrolling: touch;">
+			<div class="mx-2 flex flex-row" style="transform: translateX({(y - 1200)/4 + "px"})">
+				{#each projects.list as project, i}
+					<div class="m-2 flex-1">
+						<figure>
+							<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+						</figure>
+					</div>
+				{/each}
 			</div>
-		{/each}
-	</div>
-	<div class="mx-2 flex flex-row" style="transform: translateX({-(y - 1200)/4 + "px"})">
-		{#each projects.list as project, i}
-			<div transition:fade class="m-2 flex-1">
-				<figure>
-					<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
-				</figure>
+			<div class="mx-2 flex flex-row" style="transform: translateX({-(y - 1200)/4 + "px"})">
+				{#each projects.list as project, i}
+					<div class="m-2 flex-1">
+						<figure>
+							<img class="text-center rounded-lg" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+						</figure>
+					</div>
+				{/each}
 			</div>
-		{/each}
-	</div>
-</div>
+		</div>
 
-
-<div id="underground-end" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in pt-32 pb-32 relative" transition:fade>
-  <!-- contact -->
-	<div id="contact" class="mx-2" style="transform: scale({1/(1 - Math.max(0, y / 5000))})">
-	
-		<IconContact />
-		<p id="contact-title" class="text-4xl">Contact</p>
-		<div transition:slide class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 bg-transparent rounded-lg">
-			<div class="w-full text-center">
+		<!-- contact -->
+		<div id="contact" class="mt-32 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="transform: scale({Math.min(1.7,1/(1 - Math.max(0, y / 5000)))})">
+			<IconContact />
+			<p id="contact-title" class="text-4xl">Contact</p>
+			<div class="px-6 text-center">
 				{about.about.contact}
 			</div>
 		</div>
-	</div>
-	
-</div>
 
+	</div>
 </div>
