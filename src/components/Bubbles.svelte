@@ -5,36 +5,38 @@
   import Tooltip from "../components/Tooltip.svelte";
 </script>
 
-
-<div class="bubble-default bubble1 frosted-glass">
-  <Tooltip tooltipText="My projects">
-    <div class="bubble-circle">
-      <div class="mt-5"><IconProjects /></div>
-    </div>
-  </Tooltip>
-</div>
-<div class="bubble-default bubble2 frosted-glass">
-  <Tooltip tooltipText="My skills">
-    <div class="bubble-circle">
-      <div class="mt-5"><IconSkills /></div>
-    </div>
-  </Tooltip>
-</div>
-<div class="bubble-default bubble3 frosted-glass">
-  <Tooltip tooltipText="A warm (coffee) welcome!">
-    <div class="bubble-circle">
-      <div class="mt-4"><IconWelcome /></div>
-    </div>
-  </Tooltip>
+<div id="bubbles" class="relative mx-auto p-6 w-full h-full">
+	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-gray-300 w-48 h-48" />
+  <div class="bubble-background bubble1 frosted-glass">
+    <Tooltip tooltipText="My projects">
+      <div class="bubble-circle">
+        <div class="mt-3"><IconProjects /></div>
+      </div>
+    </Tooltip>
+  </div>
+  <div class="bubble-background bubble2 frosted-glass">
+    <Tooltip tooltipText="My skills">
+      <div class="bubble-circle">
+        <div class="mt-2"><IconSkills /></div>
+      </div>
+    </Tooltip>
+  </div>
+  <div class="bubble-background bubble3 frosted-glass">
+    <Tooltip tooltipText="A warm (coffee) welcome!">
+      <div class="bubble-circle">
+        <div class="mt-2"><IconWelcome /></div>
+      </div>
+    </Tooltip>
+  </div>
 </div>
 
 <style>
-  .bubble-default {
+  .bubble-background {
     position: absolute;
-    top: calc(9rem + 8px);
-    left: calc(50% - 40px);
-    width: 80px;
-    height: 80px;
+    top: calc(6rem - 6px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
     display: inline-block;
     border-radius: 50%;
     transition: 0.25s ease-in-out;
@@ -43,9 +45,9 @@
     transition-delay: 0.05s;
   }
 
-  .bubble-default:hover {
+  .bubble-background:hover {
     /*background-color: rgba(255, 255, 255, 0.25);
-                          border: white 1px solid;*/
+                                                          border: white 1px solid;*/
     animation-play-state: paused;
   }
 
@@ -56,8 +58,8 @@
 
   .bubble-circle {
     /* background-color: rgba(255, 255, 255, 0.5); */
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
     border: transparent solid 3px;
     border-radius: 50%;
@@ -84,28 +86,28 @@
 
   @keyframes orbit1 {
     from {
-      transform: rotate(60deg) translateX(calc(-12rem - 12px)) rotate(-60deg);
+      transform: rotate(60deg) translateX(calc(-8rem - 12px)) rotate(-60deg);
     }
     to {
-      transform: rotate(420deg) translateX(calc(-12rem - 12px)) rotate(-420deg);
+      transform: rotate(420deg) translateX(calc(-8rem - 12px)) rotate(-420deg);
     }
   }
 
   @keyframes orbit2 {
     from {
-      transform: rotate(0deg) translateX(calc(12rem + 12px)) rotate(0deg);
+      transform: rotate(0deg) translateX(calc(8rem + 12px)) rotate(0deg);
     }
     to {
-      transform: rotate(360deg) translateX(calc(12rem + 12px)) rotate(-360deg);
+      transform: rotate(360deg) translateX(calc(8rem + 12px)) rotate(-360deg);
     }
   }
 
   @keyframes orbit3 {
     from {
-      transform: rotate(-60deg) translateX(calc(-12rem - 12px)) rotate(60deg);
+      transform: rotate(-60deg) translateX(calc(-8rem - 12px)) rotate(60deg);
     }
     to {
-      transform: rotate(300deg) translateX(calc(-12rem - 12px)) rotate(-300deg);
+      transform: rotate(300deg) translateX(calc(-8rem - 12px)) rotate(-300deg);
     }
   }
 </style>

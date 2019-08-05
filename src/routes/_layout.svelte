@@ -22,6 +22,7 @@
 	}
 
 	:global(body) {
+	  background-color: rgb(32, 0, 1);
 	  text-align: center;
 	  margin: auto;
 	  width: 100%;

@@ -1,6 +1,6 @@
 <script>
-  const layers = [0, 1, 3, 4, 5, 6, 8];
-  export let y;
+ const layers = [0, 1, 3, 4, 5, 6, 8];
+ export let y;
 </script>
 
 <div class="fade-in">
@@ -8,7 +8,7 @@
 
     {#each layers as layer}
       <img
-        style="transform: translate(0,{-y * layer / (layers.length + 1)}px)"
+        style="transform: translate(0,{-y * layer / (layers.length + 1)}px);"
         src="https://www.firewatchgame.com/images/parallax/parallax{layer}.png"
         alt="parallax layer {layer}"
       >

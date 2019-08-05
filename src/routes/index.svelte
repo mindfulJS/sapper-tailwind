@@ -41,11 +41,11 @@
 <div in:fade="{{ delay: 280 }}" out:fade>
 <!-- Picture in circle-->
 <a href="#underground" alt="Go down">
-	<div transition:fade class="max-w-sm mx-auto flex p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
-		<figure class="mx-auto p-6" >
-			<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50 shadow-xl" />
+	<div transition:fade class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}; transform: scale({1 - Math.max(0, y / 1500)})">
+		<!--<figure class="mx-auto p-6" >
+			<img src="bitmoji.gif" alt="Ben" class="rounded-full border-4 border-gray-300 w-50 h-50 shadow-xl" />-->
 			<Bubbles />
-		</figure>
+		<!--</figure>-->
 	</div>
 </a>
 
