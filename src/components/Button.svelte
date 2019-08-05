@@ -4,7 +4,7 @@
 
 <style>
 	.btn-container {
-	  background-color: rgba(255, 255, 255, 0.7);
+	  background-color: rgba(255, 255, 255, 0.5);
 	}
 </style>
 

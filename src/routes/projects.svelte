@@ -8,9 +8,9 @@
 </script>
 
 <style>
-  .card-container {
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+  .frosted-glass {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
   }
 </style>
 
@@ -21,7 +21,7 @@
 <svelte:window bind:scrollY={y}/>
 
 {#each projects.list as project, i (project.id)}
-  <div in:slide="{{ delay: 300 * i }}" out:slide class="card-container max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl flex mx-auto p-6 m-6 rounded-lg shadow-xl" on:mouseover="{() => project.showDescription = true}" on:mouseout="{() => project.showDescription = false}">
+  <div in:slide="{{ delay: 300 * i }}" out:slide class="frosted-glass max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl flex mx-auto p-6 m-6 rounded-lg shadow-xl" on:mouseover="{() => project.showDescription = true}" on:mouseout="{() => project.showDescription = false}">
     <div class="w-1/3 mr-4">{project.name}</div>
     <figure class="w-2/3">
       <img class="cursor-pointer hover:opacity-75" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}" on:click="{() => project.showDescription = true}">

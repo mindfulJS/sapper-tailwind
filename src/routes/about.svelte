@@ -8,9 +8,9 @@
 </script>
 
 <style>
-  .card-container {
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+  .frosted-glass {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
   }
 </style>
 
@@ -20,7 +20,7 @@
 
 <svelte:window bind:scrollY={y}/>
 
-<div in:slide="{{ delay: 220 }}" out:slide class="card-container max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 rounded-lg shadow-xl" on:mouseover="{() => showDescription = true}" on:mouseout="{() => showDescription = false}">
+<div in:slide="{{ delay: 220 }}" out:slide class="frosted-glass max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto flex p-6 m-6 rounded-lg shadow-xl" on:mouseover="{() => showDescription = true}" on:mouseout="{() => showDescription = false}">
 	<figure class="w-1/3 mr-4">
 		<img src="ben.jpg" alt="Ben" class="cursor-pointer hover:opacity-75 rounded-full w-30 h-30" on:click="{() => showDescription = true}" />
 	</figure>
