@@ -31,11 +31,11 @@
 <nav class="m-auto w-auto p-4" style="transform: scale({1 - Math.max(0, y / 1500)})">
 	<ul class="flex">
 		<li><a id="home" class='{segment === undefined ? "selected" : ""} p-2' href='.' on:click="{() => current = 'home'}">
-			<Button buttonColor="white">Home</Button></a></li>
+			<Button>Home</Button></a></li>
 		<li><a id="projects" class='{segment === "projects" ? "selected" : ""} p-2' href='projects' on:click="{() => current = 'projects'}">
-			<Button buttonColor="white">Projects</Button></a></li>
+			<Button>Projects</Button></a></li>
 		<li><a id="about" class='{segment === "about" ? "selected" : ""} p-2' href='about' on:click="{() => current = 'about'}">
-			<Button buttonColor="white">About</Button></a></li>
+			<Button>About</Button></a></li>
 	</ul>
 	<!-- Animated bar-->
 	<div class="pt-4">

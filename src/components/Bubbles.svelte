@@ -6,7 +6,7 @@
 </script>
 
 <div id="bubbles" class="relative mx-auto p-6 w-full h-full">
-	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-gray-300 w-48 h-48" />
+	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-transparent w-48 h-48" />
   <div class="bubble-background bubble1 frosted-glass">
     <Tooltip tooltipText="My projects">
       <div class="bubble-circle">
@@ -47,7 +47,7 @@
 
   .bubble-background:hover {
     /*background-color: rgba(255, 255, 255, 0.25);
-                                                          border: white 1px solid;*/
+                                                            border: white 1px solid;*/
     animation-play-state: paused;
   }
 
