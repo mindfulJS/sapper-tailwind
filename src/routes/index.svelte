@@ -53,6 +53,7 @@
 <div class="pt-10">
 	<ButtonScrollDown />
 </div>
+
 <!-- Underground part -->
 <div transition:fade id="underground" class="text-white max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6 opacity-0 fade-in">
   <!-- Welcome -->
@@ -85,7 +86,6 @@
 
 <!-- Carousel -->
 <div id="carousel" class="overflow-x-hidden mt-10 mb-32 mx-auto text-center w-full">
-	
 	<div class="mx-2 flex flex-row" style="transform: translateX({(y - 1200)/4 + "px"})">
 		{#each projects.list as project, i}
 			<div transition:fade class="m-2 flex-1">
@@ -104,7 +104,6 @@
 			</div>
 		{/each}
 	</div>
-	
 </div>
 
 
