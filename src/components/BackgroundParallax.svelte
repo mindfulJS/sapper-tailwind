@@ -8,7 +8,7 @@
 
     {#each layers as layer}
       <img
-        style="transform: translate(0,{-y * layer / (layers.length + 1)}px);"
+        style="transform: translate(0,{-y * layer / (layers.length + 1)}px); filter: hue-rotate(200deg);"
         src="https://www.firewatchgame.com/images/parallax/parallax{layer}.png"
         alt="parallax layer {layer}"
       >
@@ -16,11 +16,9 @@
     
   </div>
 	
-  <div class="last-layer-container">
-    <div class="last-layer">
-		</div>
-  </div>
-	
+  <div class="last-layer-container" style="filter: hue-rotate(200deg);">
+		<div class="last-layer"></div>
+	</div>
 </div>
 
 <style>

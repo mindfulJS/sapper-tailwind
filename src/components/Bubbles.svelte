@@ -5,39 +5,39 @@
   import Tooltip from "../components/Tooltip.svelte";
 
   /*
-      let range = 20;
-      let width = window.innerWidth;
-      let height = window.innerHeight;
+                                                          let range = 20;
+                                                          let width = window.innerWidth;
+                                                          let height = window.innerHeight;
 
-      let originX = width / 2;
-      let originY = height / 2;
-      let totalX = width / 2;
-      let totalY = height / 2;
-      let mouseX;
-      let mouseY;
-      let positionX;
-      let positionY;
-      let x;
-      let y;
+                                                          let originX = width / 2;
+                                                          let originY = height / 2;
+                                                          let totalX = width / 2;
+                                                          let totalY = height / 2;
+                                                          let mouseX;
+                                                          let mouseY;
+                                                          let positionX;
+                                                          let positionY;
+                                                          let x;
+                                                          let y;
 
-      function GetMousePosition(event) {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-        positionX = mouseX - originX;
-        positionY = mouseY - originY;
-        console.log(mouseX);
-        x = Math.min(positionX / totalX, 1) * range;
-        y = -Math.min(positionY / totalY, 1) * range;
-      }
+                                                          function GetMousePosition(event) {
+                                                            mouseX = event.clientX;
+                                                            mouseY = event.clientY;
+                                                            positionX = mouseX - originX;
+                                                            positionY = mouseY - originY;
+                                                            console.log(mouseX);
+                                                            x = Math.min(positionX / totalX, 1) * range;
+                                                            y = -Math.min(positionY / totalY, 1) * range;
+                                                          }
 
-       on:mousemove="{GetMousePosition}"
-         style="transform: rotateX({y}deg) rotateY({x}deg)"
-      */
+                                                           on:mousemove="{GetMousePosition}"
+                                                             style="transform: rotateX({y}deg) rotateY({x}deg)"
+                                                          */
 </script>
 
 
 <div id="bubbles" class="relative mx-auto p-6 w-full h-full">
-	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-transparent w-48 h-48" />
+	<img src="bitmoji.gif" alt="Ben" class="mx-auto rounded-full border-4 border-transparent w-48 h-48" style="filter: drop-shadow(0 0 0.75rem white);" />
   <div class="bubble-background bubble1 frosted-glass">
     <Tooltip tooltipText="My projects">
       <div class="bubble-circle">
@@ -77,8 +77,8 @@
   }
 
   .bubble-background:hover {
-    /*background-color: rgba(255, 255, 255, 0.25);
-                                                                                      border: white 1px solid;*/
+    background-color: rgba(255, 255, 255, 0.05);
+    filter: drop-shadow(0 0 0.75rem white);
     animation-play-state: paused;
   }
 
@@ -100,7 +100,7 @@
   }
   .bubble-circle:hover {
     background-color: rgba(255, 255, 255, 0.35);
-    border: white solid 3px;
+    /*border: white solid 3px;*/
   }
 
   .bubble1 {
