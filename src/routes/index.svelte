@@ -1,6 +1,6 @@
 <script>
 	import { fade, slide } from "svelte/transition";
-	import Bubbles from "../components/Bubbles.svelte";
+	//import Bubbles from "../components/Bubbles.svelte";
 	import ButtonScrollDown from "../components/ButtonScrollDown.svelte";
 	import IconWelcome from "../components/IconWelcome.svelte";
 	import IconSkills from "../components/IconSkills.svelte";
@@ -37,13 +37,14 @@
 <!-- Define y for scrolling -->
 <svelte:window bind:scrollY={y}/>
 
-<div in:fade="{{ delay: 280 }}" out:fade>
+<div in:fade="{{ delay: 280 }}" out:fade class="mt-64">
 	<!-- Picture in circle-->
+	<!--
 	<a href="#underground" alt="Go down">
 		<div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto p-6 m-6" style="opacity: {1 - Math.max(0, y / 200)}">
 			<Bubbles />
 		</div>
-	</a>
+	</a>-->
 
 	<!-- Button to go down the page -->
 	<div class="pt-10">

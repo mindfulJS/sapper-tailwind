@@ -5,8 +5,8 @@
 
 <style>
   .bar {
-    background-color: rgba(255, 255, 255, 0.75);
-    height: 4px;
+    background-color: white;
+    height: 2px;
     transition: 0.2s;
   }
 

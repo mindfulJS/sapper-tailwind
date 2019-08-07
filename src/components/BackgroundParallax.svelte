@@ -23,7 +23,6 @@
 
 <style>
 	.fade-in {
-	  background-color: rgb(253, 174, 51);
 	  opacity: 0;
 	  animation: fadeIn 0.4s forwards;
 	  animation-delay: 0.2s;
@@ -56,20 +55,16 @@
 	  position: relative;
 	  width: 100%;
 	  min-height: 750vh;
-	  color: rgb(220, 113, 43);
 	  text-align: center;
-	  /*padding: 4em 0.5em 0.5em 0.5em;*/
-	  box-sizing: border-box;
 	}
 
 	.last-layer {
 	  position: absolute;
-	  top: 700px;
+	  top: 711px;
 	  left: 0;
 	  width: 100%;
-	  height: calc(100% - 700px);
+	  height: calc(100% - 711px);
 	  background-color: rgb(32, 0, 1);
-	  color: white;
 	  /*padding: 20vh 0 0 0;*/
 	}
 

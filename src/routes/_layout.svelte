@@ -4,6 +4,7 @@
 	import Nav from "../components/Nav.svelte";
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
+	import Bubbles from "../components/Bubbles.svelte";
 
 	export let segment;
 	export let y;
@@ -58,6 +59,7 @@
 	<BackgroundParallax {y} />
 	<div class="foreground">
 			<Nav {segment}/>
+			<Bubbles {segment} />
 			<main class="mt-4">
 				<slot {y}></slot>
 			</main>
