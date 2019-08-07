@@ -19,9 +19,9 @@
     
   </div>
 	
-  <div class='last-layer-container'>
+<!--  <div class='last-layer-container'>-->
 		<div class="last-layer {$darkMode ? "night" : "day" }"></div>
-	</div>
+<!--	</div>-->
 </div>
 
 <style>
@@ -76,7 +76,8 @@
 	  top: 711px;
 	  left: 0;
 	  width: 100%;
-	  height: calc(100% - 711px);
+	  /*height: calc(100% - 711px);*/
+	  height: 800vh;
 	  background-color: rgb(32, 0, 1);
 	  /*padding: 20vh 0 0 0;*/
 	}
