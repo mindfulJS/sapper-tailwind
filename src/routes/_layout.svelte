@@ -56,7 +56,7 @@
 	</div>
 {:else}
 
-	<BackgroundParallax {y} />
+	<BackgroundParallax {y} {segment}/>
 	<div class="foreground">
 			<Nav {segment}/>
 			<Bubbles {segment} />

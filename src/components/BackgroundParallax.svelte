@@ -1,6 +1,8 @@
 <script>
+ import { darkMode } from "../stores.js";
  const layers = [0, 1, 3, 4, 5, 6, 8];
  export let y;
+ export let segment;
 </script>
 
 <div class="fade-in">
@@ -8,7 +10,8 @@
 
     {#each layers as layer}
       <img
-        style="transform: translate(0,{-y * layer / (layers.length + 1)}px); filter: hue-rotate(200deg);"
+				class='{$darkMode ? "night" : "day" }'
+				style="transform: translate(0,{-y * layer / (layers.length + 1)}px);"
         src="https://www.firewatchgame.com/images/parallax/parallax{layer}.png"
         alt="parallax layer {layer}"
       >
@@ -16,12 +19,22 @@
     
   </div>
 	
-  <div class="last-layer-container" style="filter: hue-rotate(200deg);">
-		<div class="last-layer"></div>
+  <div class='last-layer-container'>
+		<div class="last-layer {$darkMode ? "night" : "day" }"></div>
 	</div>
 </div>
 
 <style>
+	.night {
+	  transition: filter 2s ease-in-out;
+	  filter: hue-rotate(200deg);
+	}
+
+	.day {
+	  transition: filter 2s ease-in-out;
+	  filter: hue-rotate(360deg);
+	}
+
 	.fade-in {
 	  opacity: 0;
 	  animation: fadeIn 0.4s forwards;

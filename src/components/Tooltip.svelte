@@ -27,7 +27,7 @@
 </script>
 
 
-<div class="tooltip" on:mouseover="{() => visible = true}" on:mouseout="{() => visible = false}">
+<div class="" on:mouseover="{() => visible = true}" on:mouseout="{() => visible = false}">
   <slot></slot>
   {#if visible}
     <div class="tooltiptext" transtion:fade>
@@ -52,7 +52,6 @@
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
