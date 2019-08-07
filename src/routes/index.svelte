@@ -21,7 +21,7 @@
 	  animation-delay: 0.2s;
 	}
 	.blur {
-	  filter: blur(3px);
+	  filter: blur(2px) grayscale(1);
 	}
 	@keyframes fadeIn {
 	  0% {

@@ -12,34 +12,34 @@
     darkMode.set(!$darkMode);
   }
   /*
-                let range = 20;
-                let width = window.innerWidth;
-                let height = window.innerHeight;
+                    let range = 20;
+                    let width = window.innerWidth;
+                    let height = window.innerHeight;
 
-                let originX = width / 2;
-                let originY = height / 2;
-                let totalX = width / 2;
-                let totalY = height / 2;
-                let mouseX;
-                let mouseY;
-                let positionX;
-                let positionY;
-                let x;
-                let y;
+                    let originX = width / 2;
+                    let originY = height / 2;
+                    let totalX = width / 2;
+                    let totalY = height / 2;
+                    let mouseX;
+                    let mouseY;
+                    let positionX;
+                    let positionY;
+                    let x;
+                    let y;
 
-                function GetMousePosition(event) {
-                mouseX = event.clientX;
-                mouseY = event.clientY;
-                positionX = mouseX - originX;
-                positionY = mouseY - originY;
-                console.log(mouseX);
-                x = Math.min(positionX / totalX, 1) * range;
-                y = -Math.min(positionY / totalY, 1) * range;
-                }
+                    function GetMousePosition(event) {
+                    mouseX = event.clientX;
+                    mouseY = event.clientY;
+                    positionX = mouseX - originX;
+                    positionY = mouseY - originY;
+                    console.log(mouseX);
+                    x = Math.min(positionX / totalX, 1) * range;
+                    y = -Math.min(positionY / totalY, 1) * range;
+                    }
 
-                on:mousemove="{GetMousePosition}"
-                style="transform: rotateX({y}deg) rotateY({x}deg)"
-                */
+                    on:mousemove="{GetMousePosition}"
+                    style="transform: rotateX({y}deg) rotateY({x}deg)"
+                    */
 </script>
 
 <div id="bubble-main"><img src="bitmoji.gif" alt="Ben" class='bubble-main-default cursor-pointer {segment === undefined ? "" : "bubble-main-translate"}' on:click="{toggleDarkMode}" /></div>
