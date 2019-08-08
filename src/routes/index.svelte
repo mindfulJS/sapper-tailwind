@@ -20,8 +20,8 @@
 	  animation: fadeIn 0.4s forwards;
 	  animation-delay: 0.2s;
 	}
-	.blur {
-	  filter: blur(2px) grayscale(1);
+	.grayscale {
+	  filter: grayscale(1);
 	}
 	@keyframes fadeIn {
 	  0% {
@@ -90,7 +90,7 @@
 			<div class="mx-2 flex flex-row" style="transform: translateX({-(y - 1200)/4 + "px"})">
 				{#each projects.list as project, i}
 					<div class="m-2 flex-1">
-						<img class="text-center rounded-lg blur" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
+						<img class="text-center rounded-lg grayscale" src="projects-{project.name.replace(/ /g,'')}.png" alt="{project.name}">
 					</div>
 				{/each}
 			</div>
